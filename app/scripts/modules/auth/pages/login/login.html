@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        
+        <!-- Login panel -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Login
+            </div>
+            <div class="panel-body">
+                <form class="form" name="form" ng-submit="login()">
+                    
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" class="form-control" ng-model="loginUser.email" required />
+                    </div>
+                    
+                    <!-- Password field -->
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" class="form-control" ng-model="loginUser.password" required />
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <div class="text-right">
+                        <button type="button" class="btn btn-link" ui-sref="auth.signup">Don't have an account yet?</button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Login</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

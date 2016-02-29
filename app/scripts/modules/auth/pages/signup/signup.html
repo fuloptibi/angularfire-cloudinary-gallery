@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        
+        <!-- Signup panel -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Signup
+            </div>
+            <div class="panel-body">
+                <form class="form" name="form" novalidate ng-submit="signup()">
+                    
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input id="signup-email" name="email" type="email" class="form-control" ng-model="signupUser.email" required />
+                    </div>
+                    
+                    <!-- Password field -->
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input id="signup-password" name="password" type="password" class="form-control" ng-model="signupUser.password" required />
+                    </div>
+                    
+                    <!-- Confirm password field -->
+                    <div class="form-group">
+                        <label for="signup-password2">Confirm Password</label>
+                        <input id="signup-password2" name="password2" type="password" class="form-control" ng-model="signupUser.password2" same-as="signupUser.password" required />
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <div class="text-right">
+                        <button type="button" class="btn btn-link" ui-sref="auth.login">Already have an account?</button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Signup Now!</button>
+                    </div>
+                        
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

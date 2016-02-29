@@ -1,0 +1,23 @@
+<h1>{{ gallery.name }}</h1>
+
+<p ngf-drop="uploadFiles($files)"
+   ngf-drag-over-class="dragOverClass($event)"
+   ng-model="files"
+   ng-multiple="true">
+    
+    <a href="javascript:" class="btn btn-primary" ngf-select="uploadFiles($files)" multiple resetOnClick="true">
+        <i class="glyphicon glyphicon-upload"></i>
+        Upload Image
+    </a>
+</p>
+
+<div class="row">
+    <div class="col-sm-3" ng-repeat="image in galleryImages">
+        <div class="thumbnail">
+            <a ng-href="{{ image.url }}" target="_blank"><img ng-src="{{ image.url }}" alt="{{ image.title }}" /></a>
+            <div class="caption text-center">
+                {{ image.original_filename }}
+            </div>
+        </div>
+    </div>
+</div>

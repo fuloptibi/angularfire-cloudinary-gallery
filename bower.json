@@ -1,0 +1,58 @@
+{
+  "name": "angularfire-cloudinary-gallery",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tibor Fulop <tibi@mindcrumbs.net>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/fuloptibi/angularfire-cloudinary-gallery",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-cookies": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-touch": "^1.5.0",
+    "firebase": "^2.4.1",
+    "angularfire": "^1.1.4",
+    "angular-ui-router": "^0.2.18",
+    "jquery": "^2.2.1",
+    "jquery-ui": "^1.11.4",
+    "jquery-colorbox": "colorbox#^1.6.3",
+    "angular-bootstrap": "^1.2.1",
+    "cloudinary_ng": "^0.2.0",
+    "cloudinary-jquery-file-upload": "^2.0.6",
+    "ng-file-upload": "^12.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0",
+    "mockfirebase": "^0.11.0"
+  },
+  "overrides": {
+    "blueimp-file-upload": {
+      "dependencies": {
+        "jquery": ">=1.6",
+        "jquery-ui": ">=1.11",
+        "blueimp-tmpl": ">=2.5.4",
+        "blueimp-load-image": ">=1.13.0",
+        "blueimp-canvas-to-blob": ">=2.1.1"
+      }
+    }
+  },
+  "resolutions": {
+    "angular": "1.5.0",
+    "firebase": "^2.4.1",
+    "angularfire": "^1.1.4"
+  }
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gallery</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Superhero Bootstrap 3 theme loaded from CDN -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css">
+        
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/gallery.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="gallery">
+        <!--[if lte IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="header" ng-cloak>
+            <div class="navbar navbar-inverse" role="navigation">
+                <div class="container" ng-init="navCollapsed = true">
+                    
+                    <!-- Branding -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" ng-click="navCollapsed = !navCollapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                         </button>
+                        <a class="navbar-brand" ui-sref="home">Gallery</a>
+                    </div>
+                
+                    <!-- Top navigation -->
+                    <div id="topMenu" class="navbar-collapse" ng-class="{collapse: navCollapsed}">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                            <li ui-sref-active="active" if-logged-in="false">
+                                <a ui-sref="auth.login">Login</a>
+                            </li>
+                            <li ui-sref-active="active" if-logged-in="false">
+                                <a ui-sref="auth.signup">Sign Up</a>
+                            </li>
+                            <li if-logged-in="true">
+                                <a href="javascript:" ng-click="logout()">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" ng-cloak ui-view>
+            Test
+        </div>
+        
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/jquery-colorbox/jquery.colorbox.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/cloudinary-core/cloudinary-core.js"></script>
+        <script src="bower_components/cloudinary_ng/js/angular.cloudinary.js"></script>
+        <script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+        <script src="bower_components/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/modules/error/error.js"></script>
+        <script src="scripts/modules/database/database.js"></script>
+        <script src="scripts/modules/templates/templates.js"></script>
+        <script src="scripts/modules/uploader/uploader.js"></script>
+        <script src="scripts/modules/auth/auth.js"></script>
+        <script src="scripts/modules/auth/directives/ifLoggedIn.js"></script>
+        <script src="scripts/modules/auth/directives/sameAs.js"></script>
+        <script src="scripts/modules/auth/pages/login/login.js"></script>
+        <script src="scripts/modules/auth/pages/signup/signup.js"></script>
+        <script src="scripts/modules/auth/services/auth.js"></script>
+        <script src="scripts/pages/home/home.js"></script>
+        <script src="scripts/pages/createGallery/createGallery.js"></script>
+        <script src="scripts/pages/editGallery/editGallery.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

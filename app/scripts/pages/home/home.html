@@ -1,0 +1,32 @@
+<!-- Home page for logged out users -->
+<div if-logged-in="false">
+    <div class="jumbotron">
+        <h1>Welcome to Gallery</h1>
+        <p>A demo project using AngularFire and Cloudinary together.</p>
+        <a ui-sref="auth.login" class="btn btn-primary btn-lg">Login</a>
+    </div>
+</div>
+
+<!-- Home page for logged in users -->
+<div if-logged-in="true">
+    
+    <p class="alert alert-info" ng-if="!galleries.length">
+        You don't have any galleries yet.
+    </p>
+    
+    <p>
+        <a ui-sref="createGallery" class="btn btn-primary">
+            <i class="glyphicon glyphicon-plus"></i>
+            Create new Gallery
+        </a>
+    </p>
+    
+    <div class="row" ng-if="galleries.length">
+        <div class="col-sm-3" ng-repeat="gallery in galleries">
+            <a ui-sref="editGallery({id: gallery.$id})" class="btn btn-default btn-block">
+                {{ gallery.name }}
+            </a>
+        </div>
+    </div>
+    
+</div>

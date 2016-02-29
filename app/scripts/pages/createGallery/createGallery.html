@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        
+        <!-- Login panel -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Create Gallery
+            </div>
+            <div class="panel-body">
+                <form class="form" name="form" ng-submit="createGallery()">
+                    
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="gallery-name">Name</label>
+                        <input id="gallery-name" name="text" type="text" class="form-control" ng-model="gallery.name" required />
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Create</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
